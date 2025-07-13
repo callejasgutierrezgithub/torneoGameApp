@@ -1,6 +1,6 @@
 # Aplicacion torneoGameApp
 
-Proyecto Django
+Proyecto Django...
 
 nombre: Omar Callejas Gutierrez
 correo: callejasgutierrez@gmail.com
