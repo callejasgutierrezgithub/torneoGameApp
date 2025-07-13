@@ -1,0 +1,20 @@
+<h1>Juegos</h1>
+
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>titulo</th>
+            <th>genero</th>
+            <th>creador</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for juego in juegos %}
+        <tr>
+            <td scope="row">{{ juego.titulo }}</td>
+            <td>{{ juego.genero }}</td>
+            <td>{{ juego.creador }}</td>
+        </tr>   
+        {% endfor %}     
+    </tbody>
+</table>

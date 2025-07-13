@@ -1,0 +1,20 @@
+<h1>Jugadores</h1>
+
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>nickname</th>
+            <th>pais</th>
+            <th>fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for jugador in jugadores %}
+        <tr>
+            <td scope="row">{{ jugador.nickname }}</td>
+            <td>{{ jugador.pais }}</td>
+            <td>{{ jugador.created_at }}</td>
+        </tr>   
+        {% endfor %}     
+    </tbody>
+</table>
