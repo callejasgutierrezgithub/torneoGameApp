@@ -1,0 +1,43 @@
+<form action="{% url 'juegos' %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1>Registrar Juegos</h1></legend>
+        {% if error_message %}
+            <p class="error">{{ error_message }}</p>
+        {% endif %}
+        
+        <label for="titulo">Título: </label>
+        <input type="text" name="titulo" id="titulo" required />
+        <br/>
+
+        <label for="genero">Género: </label>
+        <input type="text" name="genero" id="genero" required />
+        <br/>
+
+        <label for="creador">Creador: </label>
+        <input type="text" name="creador" id="creador" required />
+        <br/>
+
+        <input type="submit" value="Enviar"/>
+    </fieldset>
+</form>
+
+<br/>
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>titulo</th>
+            <th>genero</th>
+            <th>creador</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for juego in juegos %}
+        <tr>
+            <td scope="row">{{ juego.titulo }}</td>
+            <td>{{ juego.genero }}</td>
+            <td>{{ juego.creador }}</td>
+        </tr>   
+        {% endfor %}     
+    </tbody>
+</table>

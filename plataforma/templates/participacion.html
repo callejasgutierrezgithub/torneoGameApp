@@ -1,0 +1,20 @@
+<h1>Participacion</h1>
+
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>jugador</th>
+            <th>torneo</th>
+            <th>puntaje_final</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for participacion in participacions %}
+        <tr>
+            <td scope="row">{{ participacion.jugador.nickname }}</td>
+            <td>{{ participacion.torneo.nombre }}</td>
+            <td>{{ participacion.puntaje_final }}</td>
+        </tr>   
+        {% endfor %}     
+    </tbody>
+</table>
